@@ -81,16 +81,19 @@ while True:
                     print("Ok, goodbye. Thanks for playing!")
                     time.sleep(2)
                     break
-        # how to get the game to repeat from the very beginning?
-        elif 'yes' in play_again:
-            print("Ok, restarting the game now.")
-            time.sleep(2)
-            if "handcuffs" in items:
-                items.remove("handcuffs")
-            break
-        else:
-            print("I'm sorry, I don't understand.")
-            time.sleep(2)
-        if 'no' in play_again:
-            break
-    #break
+                    # how to get the game to repeat from the very beginning?
+                elif 'yes' in play_again:
+                    print("Ok, restarting the game now.")
+                    time.sleep(2)
+                    if "handcuffs" in items:
+                        items.remove("handcuffs")
+                    break
+                else:
+                    print("I'm sorry, I don't understand.")
+                    time.sleep(2)
+                if 'no' in play_again:
+                    break
+
+    # If I enable this break, the game will end when the player says 'no' to playing again.
+    # But it will also mean that if they say 'yes' to playing again, it will end.
+    break
