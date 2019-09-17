@@ -1,5 +1,10 @@
 import time
+
+import random
+
 items = []
+
+weapon = ['knife', 'sword', 'axe', 'hammer']
 
 def valid_input(prompt, option1, option2):
     while True:
@@ -43,9 +48,10 @@ while True:
                 print("You walk back outside to the town square.")
                 time.sleep(2)
             else:
+                weapon = random.choice(weapon)
                 print("You enter the general store and browse the shelves.")
                 time.sleep(2)
-                print("You use the money in your pocket to buy a WEAPON and a pair of handcuffs.")
+                print(f"You use the money in your pocket to buy a {weapon} and a pair of handcuffs.")
                 time.sleep(2)
                 print("You walk back outside to the town square.")
                 time.sleep(2)
@@ -94,6 +100,6 @@ while True:
                 if 'no' in play_again:
                     break
 
-    # If I enable this break, the game will end when the player says 'no' to playing again.
+    # If this break is enabled, the game will end when the player says 'no' to playing again.
     # But it will also mean that if they say 'yes' to playing again, it will end.
     break
