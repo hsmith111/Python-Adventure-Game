@@ -61,12 +61,14 @@ while True:
                     print_pause("Luckily, you are prepared! You fight the bandit and win, "
                         "putting the handcuffs on his wrists.")
                     print_pause("You secure him there and leave to find the sheriff.")
+                    print_pause("Game over, you win!!")
                     #break
                 else:
                     print_pause("You do your best, but you don't have anything to fight with.")
                     print_pause("The bandit overpowers you and locks you in the closet.")
+                    print_pause("Game over! You lost.")
                 # Quit the program or restart from the beginning.
-                play_again = valid_input("Game over! Would you like to play again? (yes/no)\n", "yes", "no")
+                play_again = valid_input("Would you like to play again? (yes/no)\n", "yes", "no")
                 if 'no' in play_again:
                     print_pause("Ok, goodbye. Thanks for playing!")
                     break
